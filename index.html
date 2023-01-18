@@ -41,7 +41,6 @@
                     </div>
                 </div>
                 <div class="col-md-8 col-lg-6 col-xl-4">
-
                     <div id="result"></div>
                     <div id="hide" class="card" style="color: #0B0B45; border-radius: 35px; height: 300px;">
                         <h2 class="p-3 m-2" style="color: #0B0B45;">Planning to go out!</h2>
@@ -49,15 +48,8 @@
                                 style="color: #FF3131;font-size: larger;">MASK</span> and <span
                                 style="color: #FF3131;font-size: larger;">SANITIZER</span></h5>
                     </div>
-                    <div class="d-flex"></div>
-
-
-
-
-
                 </div>
             </div>
-
         </div>
     </section>
 </body>
@@ -67,6 +59,7 @@
         let searchname = cinput.value
         if (!searchname) {
             alert("Please enter your locality")
+            return
         }
         const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchname}&appid=8ac5c4d57ba6a4b3dfcf622700447b1e`)
         console.log(data);
